@@ -18,18 +18,19 @@ class Movies {
 
     public function movie_pegi($age) {
         if($age < $this->pegi){
-            echo "<br>Too young for the movie";
+            echo "<br>Too young for the movie<br>";
         } else {
-            echo "<br>Enjoy the movie";
+            echo "<br>Enjoy the movie<br>";
         }
 
     }
     public function print_card($age) {
         return 
-        $this->movie_pegi($age).
         "<h1>Title: {$this->title}</h1>
         <h3>Type: {$this->genre}</h3>
-        <h3>Duration: {$this->duration} min </h3>";
+        <h3>Duration: {$this->duration} min </h3>
+        <hr>"
+        .$this->movie_pegi($age);
     }
     
 }
